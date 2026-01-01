@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store - Clothing Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="index">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="index.html">Modern Clothes</a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Modern Clothes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html"><span data-translate="navHome">Home</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span data-translate="footerCategories">Categories</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="men.html"><span data-translate="navMen">Men</span></a></li>
+                                <li><a class="dropdown-item" href="women.html"><span data-translate="navWomen">Women</span></a></li>
+                                <li><a class="dropdown-item" href="kids.html"><span data-translate="navKids">Kids</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="about.html"><span data-translate="navAbout">About Us</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="contact.html"><span data-translate="navContact">Contact Us</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span data-translate="navLanguage">English</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item kh" href="#">Khmer</a></li>
+                                <li><a class="dropdown-item us" href="#">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#" class="login-button d-lg-none mt-3"><span data-translate="navLogin">Login</span></a>
+                </div>
+            </div>
+            
+            <a href="#" class="login-button ms-3 d-none d-lg-block"><span data-translate="navLogin">Login</span></a>
+        </div>
+    </nav>
+    <!-- end navbar -->
+
+    <!-- Top Bar -->
+    <div class="top-bar" style="display:none;">
+        <div class="container">
+            <p>Free Shipping on Orders Over $50</p>
+            <div>Track Order | Help</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" style="display:none;">
+        <div class="container">
+            <a href="#" class="logo">FASHION STORE</a>
+            <nav>
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="women.html">Women</a></li>
+                    <li><a href="men.html">Men</a></li>
+                    <li><a href="kids.html">Kids</a></li>
+                    <li><a href="#">Sale</a></li>
+                    <li><a href="#">New Arrivals</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <button class="icon-btn">🔍</button>
+                <button class="icon-btn">👤</button>
+                <button class="icon-btn">❤️</button>
+                <button class="icon-btn">
+                    🛒
+                    <span class="cart-count">3</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero-slider">
+        <div class="hero-slide active">
+            <img src="assets/women picture/30 Warm Winter Back-to-School Outfits You'll Love - Ruby Style.jpg" alt="Women's Collection">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p>Summer 2025</p>
+                <h2>New Collection</h2>
+                <p>Discover the latest trends in women's fashion</p>
+                <button class="hero-btn" onclick="document.getElementById('women').scrollIntoView({behavior: 'smooth'})">Shop Women</button>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <img src="assets/men picture/New Tork State of Style.jpg" alt="Men's Collection">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p>Timeless Style</p>
+                <h2>Men's Essentials</h2>
+                <p>Upgrade your wardrobe with classic pieces</p>
+                <button class="hero-btn" onclick="document.getElementById('men').scrollIntoView({behavior: 'smooth'})">Shop Men</button>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <img src="assets/kid picture/Boys Letter Print Drop Shoulder Thermal Sweatshirt.jpg" alt="Kids Collection">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <p>Fun & Comfortable</p>
+                <h2>Kids Fashion</h2>
+                <p>Adorable styles for your little ones</p>
+                <button class="hero-btn" onclick="document.getElementById('kids').scrollIntoView({behavior: 'smooth'})">Shop Kids</button>
+            </div>
+        </div>
+        <button class="slider-nav prev" onclick="changeHeroSlide(-1)">❮</button>
+        <button class="slider-nav next" onclick="changeHeroSlide(1)">❯</button>
+        <div class="slider-dots">
+            <button class="dot active" onclick="currentHeroSlide(0)"></button>
+            <button class="dot" onclick="currentHeroSlide(1)"></button>
+            <button class="dot" onclick="currentHeroSlide(2)"></button>
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="section-header">
+                <h2><span data-translate="categoriesTitle">Shop by Category</span></h2>
+                <p>Find your perfect style</p>
+            </div>
+            <div class="category-grid">
+                <div class="category-card">
+                    <a href="women.html">
+                        <img src="assets/women picture/Poetry Atelier V-Neck Knit Vests - L _ Black.jpg" alt="Women">
+                        <div class="category-overlay">
+                            <h3><span data-translate="categoryWomen">Women</span></h3>
+                            <p>Elegant & Trendy</p>
+                            <button class="category-btn">Shop Now</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-card">
+                    <a href="men.html">
+                        <img src="assets/men picture/download (9).jpg" alt="Men">
+                        <div class="category-overlay">
+                            <h3><span data-translate="categoryMen">Men</span></h3>
+                            <p>Classic & Modern</p>
+                            <button class="category-btn">Shop Now</button>
+                        </div>
+                    </a>
+                </div>
+                <div class="category-card">
+                    <a href="kids.html">
+                        <img src="assets/kid picture/download (10).jpg" alt="Kids">
+                        <div class="category-overlay">
+                            <h3><span data-translate="categoryKids">Kids</span></h3>
+                            <p>Fun & Comfortable</p>
+                            <button class="category-btn">Shop Now</button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Women's Products -->
+    <section id="women" class="product-section">
+        <div class="container">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2><span data-translate="womenCollection">Women's Collection</span></h2>
+                    <p>Discover the latest trends</p>
+                </div>
+                <a href="women.html" class="view-all"><span data-translate="viewAll">View All →</span></a>
+            </div>
+            <div class="product-slider">
+                <div class="product-track" id="womenTrack">
+                    <div class="product-card" onclick="viewProduct('w1')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/women picture/download (9).jpg" alt="Product">
+                            <span class="product-tag new"><span data-translate="tagNew">New</span></span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name"><span data-translate="productW1">Elegant Summer Dress</span></div>
+                            <div class="product-price">$89.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('w2')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/women picture/download (10).jpg" alt="Product">
+                            <span class="product-tag sale"><span data-translate="tagSale">Sale</span></span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name"><span data-translate="productW2">Floral Print Blouse</span></div>
+                            <div class="product-price">$54.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('w3')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/women picture/download (11).jpg" alt="Product">
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">High-Waist Jeans</div>
+                            <div class="product-price">$79.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('w4')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/women picture/download (12).jpg" alt="Product">
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Casual T-Shirt</div>
+                            <div class="product-price">$29.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('w5')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/women picture/download (13).jpg" alt="Product">
+                            <span class="product-tag new">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Evening Gown</div>
+                            <div class="product-price">$159.99</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="product-nav prev" onclick="slideProducts('women', -1)" id="womenPrev">❮</button>
+                <button class="product-nav next" onclick="slideProducts('women', 1)" id="womenNext">❯</button>
+            </div>
+            <div class="product-dots" id="womenDots"></div>
+        </div>
+    </section>
+
+    <!-- Men's Products -->
+    <section id="men" class="product-section">
+        <div class="container">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2><span data-translate="menCollection">Men's Collection</span></h2>
+                    <p>Classic style, modern fit</p>
+                </div>
+                <a href="men.html" class="view-all"><span data-translate="viewAll">View All →</span></a>
+            </div>
+            <div class="product-slider">
+                <div class="product-track" id="menTrack">
+                    <div class="product-card" onclick="viewProduct('m1')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/men picture/download (10).jpg" alt="Product">
+                            <span class="product-tag new">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Classic Denim Jacket</div>
+                            <div class="product-price">$129.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('m2')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/men picture/download (11).jpg" alt="Product">
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Casual Polo Shirt</div>
+                            <div class="product-price">$49.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('m3')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/men picture/download (12).jpg" alt="Product">
+                            <span class="product-tag sale">Sale</span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Slim Fit Chinos</div>
+                            <div class="product-price">$69.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('m4')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/men picture/download (13).jpg" alt="Product">
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Formal Dress Shirt</div>
+                            <div class="product-price">$79.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('m5')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/men picture/download (14).jpg" alt="Product">
+                            <span class="product-tag new">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Leather Bomber Jacket</div>
+                            <div class="product-price">$249.99</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="product-nav prev" onclick="slideProducts('men', -1)" id="menPrev">❮</button>
+                <button class="product-nav next" onclick="slideProducts('men', 1)" id="menNext">❯</button>
+            </div>
+            <div class="product-dots" id="menDots"></div>
+        </div>
+    </section>
+
+    <!-- Kids Products -->
+    <section id="kids" class="product-section">
+        <div class="container">
+            <div class="section-top">
+                <div class="section-title">
+                    <h2><span data-translate="kidsCollection">Kids Collection</span></h2>
+                    <p>Fun styles for little ones</p>
+                </div>
+                <a href="kids.html" class="view-all"><span data-translate="viewAll">View All →</span></a>
+            </div>
+            <div class="product-slider">
+                <div class="product-track" id="kidsTrack">
+                    <div class="product-card" onclick="viewProduct('k1')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/kid picture/download (10).jpg" alt="Product">
+                            <span class="product-tag new">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Cute Graphic Tee</div>
+                            <div class="product-price">$24.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('k2')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/kid picture/download (11).jpg" alt="Product">
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Denim Overalls</div>
+                            <div class="product-price">$44.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('k3')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/kid picture/download (12).jpg" alt="Product">
+                            <span class="product-tag sale">Sale</span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Colorful Hoodie</div>
+                            <div class="product-price">$39.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('k4')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/kid picture/download (13).jpg" alt="Product">
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Summer Shorts</div>
+                            <div class="product-price">$19.99</div>
+                        </div>
+                    </div>
+                    <div class="product-card" onclick="viewProduct('k5')" style="cursor: pointer;">
+                        <div class="product-image">
+                            <img src="assets/kid picture/Tween Boy Khaki Japanese-Korean College Badge Long Sleeve Coat And Pant Two-Piece Suit Suitable For Sports Suitable For Fall And Winter Season.jpg" alt="Product">
+                            <span class="product-tag new">New</span>
+                            <div class="product-actions">
+                                <button class="action-btn" onclick="event.stopPropagation()">🛒</button>
+                                <button class="action-btn" onclick="event.stopPropagation()">❤️</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <div class="product-name">Winter Jacket</div>
+                            <div class="product-price">$89.99</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="product-nav prev" onclick="slideProducts('kids', -1)" id="kidsPrev">❮</button>
+                <button class="product-nav next" onclick="slideProducts('kids', 1)" id="kidsNext">❯</button>
+            </div>
+            <div class="product-dots" id="kidsDots"></div>
+        </div>
+    </section>
+
+    <!-- Login Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2><span data-translate="loginTitle">Member Login</span></h2>
+            <p><span data-translate="loginText">Sign in to access exclusive offers and track your orders</span></p>
+            <form class="newsletter-form" onsubmit="return handleLogin(event)">
+                <input type="email" class="newsletter-input" data-translate="loginEmailPlaceholder" placeholder="Enter your email" required>
+                <button type="submit" class="newsletter-btn"><span data-translate="loginButton">Login</span></button>
+            </form>
+            <p style="margin-top: 24px; font-size: 14px;">Don't have an account? <a href="#" style="color: rgb(244, 44, 44);">Sign up here</a></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h2>FASHION STORE</h2>
+                    <p>Your premier destination for the latest fashion trends. Quality clothing for every style and occasion.</p>
+                    <div class="social-links">
+                        <div class="social-btn">f</div>
+                        <div class="social-btn">📷</div>
+                        <div class="social-btn">🐦</div>
+                        <div class="social-btn">▶️</div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Stores</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Fashion Store. All rights reserved. | Privacy Policy | Terms & Conditions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product Database
+        const products = {
+            'w1': { name: 'Elegant Summer Dress', price: 89.99, category: 'Women', brand: 'ELEGANCE', image: 'assets/women picture/download (9).jpg', tag: 'New', description: 'A beautiful and elegant summer dress perfect for any occasion. Made from high-quality breathable fabric.' },
+            'w2': { name: 'Floral Print Blouse', price: 54.99, category: 'Women', brand: 'MODERN', image: 'assets/women picture/download (10).jpg', tag: 'Sale', description: 'Stylish floral print blouse with a modern fit. Perfect for casual and semi-formal occasions.' },
+            'w3': { name: 'High-Waist Jeans', price: 79.99, category: 'Women', brand: 'DENIM CO', image: 'assets/women picture/download (11).jpg', tag: '', description: 'Classic high-waist jeans with a comfortable fit. Made from premium denim fabric.' },
+            'w4': { name: 'Casual T-Shirt', price: 29.99, category: 'Women', brand: 'BASICS', image: 'assets/women picture/download (12).jpg', tag: '', description: 'Comfortable and versatile casual t-shirt. Perfect for everyday wear.' },
+            'w5': { name: 'Evening Gown', price: 159.99, category: 'Women', brand: 'ELEGANCE', image: 'assets/women picture/download (13).jpg', tag: 'New', description: 'Stunning evening gown for special occasions. Features elegant design and premium materials.' },
+            'm1': { name: 'Classic Denim Jacket', price: 129.99, category: 'Men', brand: 'DENIM CO', image: 'assets/men picture/download (10).jpg', tag: 'New', description: 'Timeless denim jacket with a modern fit. A wardrobe essential for every man.' },
+            'm2': { name: 'Casual Polo Shirt', price: 49.99, category: 'Men', brand: 'SPORT', image: 'assets/men picture/download (11).jpg', tag: '', description: 'Classic polo shirt perfect for casual outings. Soft and breathable fabric.' },
+            'm3': { name: 'Slim Fit Chinos', price: 69.99, category: 'Men', brand: 'MODERN', image: 'assets/men picture/download (12).jpg', tag: 'Sale', description: 'Modern slim fit chinos for a sharp look. Available in multiple colors.' },
+            'm4': { name: 'Formal Dress Shirt', price: 79.99, category: 'Men', brand: 'ELEGANCE', image: 'assets/men picture/download (13).jpg', tag: '', description: 'Premium formal dress shirt for business and special occasions.' },
+            'm5': { name: 'Leather Bomber Jacket', price: 249.99, category: 'Men', brand: 'PREMIUM', image: 'assets/men picture/download (14).jpg', tag: 'New', description: 'Premium leather bomber jacket with classic styling. Perfect for cooler weather.' },
+            'k1': { name: 'Cute Graphic Tee', price: 24.99, category: 'Kids', brand: 'FUN KIDS', image: 'assets/kid picture/download (10).jpg', tag: 'New', description: 'Fun graphic tee for kids with colorful designs. Soft and comfortable fabric.' },
+            'k2': { name: 'Denim Overalls', price: 44.99, category: 'Kids', brand: 'DENIM CO', image: 'assets/kid picture/download (11).jpg', tag: '', description: 'Adorable denim overalls for your little ones. Durable and easy to wear.' },
+            'k3': { name: 'Colorful Hoodie', price: 39.99, category: 'Kids', brand: 'FUN KIDS', image: 'assets/kid picture/download (12).jpg', tag: 'Sale', description: 'Warm and cozy hoodie with vibrant colors. Perfect for playtime.' },
+            'k4': { name: 'Summer Shorts', price: 19.99, category: 'Kids', brand: 'BASICS', image: 'assets/kid picture/download (13).jpg', tag: '', description: 'Lightweight summer shorts for active kids. Comfortable and breathable.' },
+            'k5': { name: 'Winter Jacket', price: 89.99, category: 'Kids', brand: 'COZY', image: 'assets/kid picture/Tween Boy Khaki Japanese-Korean College Badge Long Sleeve Coat And Pant Two-Piece Suit Suitable For Sports Suitable For Fall And Winter Season.jpg', tag: 'New', description: 'Warm winter jacket to keep kids cozy. Water-resistant and durable.' }
+        };
+
+        // Function to navigate to product detail
+        function viewProduct(productId) {
+            window.location.href = `product-detail.html?id=${productId}`;
+        }
+
+        // Hero Slider
+        let heroSlideIndex = 0;
+        let heroTimer;
+
+        function showHeroSlide(n) {
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.slider-dots .dot');
+            
+            if (n >= slides.length) { heroSlideIndex = 0; }
+            if (n < 0) { heroSlideIndex = slides.length - 1; }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[heroSlideIndex].classList.add('active');
+            dots[heroSlideIndex].classList.add('active');
+        }
+
+        function changeHeroSlide(n) {
+            clearInterval(heroTimer);
+            heroSlideIndex += n;
+            showHeroSlide(heroSlideIndex);
+            startHeroAutoplay();
+        }
+
+        function currentHeroSlide(n) {
+            clearInterval(heroTimer);
+            heroSlideIndex = n;
+            showHeroSlide(heroSlideIndex);
+            startHeroAutoplay();
+        }
+
+        function startHeroAutoplay() {
+            heroTimer = setInterval(() => {
+                heroSlideIndex++;
+                showHeroSlide(heroSlideIndex);
+            }, 5000);
+        }
+
+        // Product Sliders
+        const sliderStates = {
+            women: { index: 0, itemsPerView: 4 },
+            men: { index: 0, itemsPerView: 4 },
+            kids: { index: 0, itemsPerView: 4 }
+        };
+
+        function getItemsPerView() {
+            if (window.innerWidth < 480) return 1;
+            if (window.innerWidth < 768) return 2;
+            if (window.innerWidth < 1024) return 3;
+            return 4;
+        }
+
+        function updateSlider(category) {
+            const track = document.getElementById(`${category}Track`);
+            const cards = track.querySelectorAll('.product-card');
+            const itemsPerView = getItemsPerView();
+            const maxIndex = Math.max(0, cards.length - itemsPerView);
+            
+            sliderStates[category].itemsPerView = itemsPerView;
+            
+            if (sliderStates[category].index > maxIndex) {
+                sliderStates[category].index = maxIndex;
+            }
+            
+            const translateX = -(sliderStates[category].index * (100 / itemsPerView));
+            track.style.transform = `translateX(${translateX}%)`;
+            
+            // Update navigation buttons
+            const prevBtn = document.getElementById(`${category}Prev`);
+            const nextBtn = document.getElementById(`${category}Next`);
+            prevBtn.disabled = sliderStates[category].index === 0;
+            nextBtn.disabled = sliderStates[category].index >= maxIndex;
+            
+            // Update dots
+            updateDots(category, maxIndex);
+        }
+
+        function updateDots(category, maxIndex) {
+            const dotsContainer = document.getElementById(`${category}Dots`);
+            dotsContainer.innerHTML = '';
+            
+            if (maxIndex > 0) {
+                for (let i = 0; i <= maxIndex; i++) {
+                    const dot = document.createElement('button');
+                    dot.className = `product-dot ${i === sliderStates[category].index ? 'active' : ''}`;
+                    dot.onclick = () => {
+                        sliderStates[category].index = i;
+                        updateSlider(category);
+                    };
+                    dotsContainer.appendChild(dot);
+                }
+            }
+        }
+
+        function slideProducts(category, direction) {
+            const track = document.getElementById(`${category}Track`);
+            const cards = track.querySelectorAll('.product-card');
+            const itemsPerView = getItemsPerView();
+            const maxIndex = Math.max(0, cards.length - itemsPerView);
+            
+            sliderStates[category].index = Math.max(0, Math.min(sliderStates[category].index + direction, maxIndex));
+            updateSlider(category);
+        }
+
+        function handleLogin(e) {
+            e.preventDefault();
+            alert('Thank you for logging in!');
+            e.target.reset();
+            return false;
+        }
+
+        // Initialize
+        window.addEventListener('load', () => {
+            showHeroSlide(heroSlideIndex);
+            startHeroAutoplay();
+            
+            ['women', 'men', 'kids'].forEach(category => {
+                updateSlider(category);
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            ['women', 'men', 'kids'].forEach(category => {
+                updateSlider(category);
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    
+    <!-- Language Switcher Script -->
+    <script src="language-switch.js"></script>
+</body>
+</html>

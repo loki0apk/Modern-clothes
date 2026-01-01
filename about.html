@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Modern Clothes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .value-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: rgb(244, 44, 44);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            margin: 0 auto 24px;
+        }
+
+        .value-card h3 {
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: #000;
+        }
+
+        .value-card p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #6b7280;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 100px 20px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .team-card {
+            text-align: center;
+        }
+
+        .team-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .team-card h4 {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: #000;
+        }
+
+        .team-card p {
+            color: rgb(244, 44, 44);
+            font-size: 16px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #000;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 20px;
+            margin-bottom: 32px;
+            color: #d1d5db;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: rgb(244, 44, 44);
+            color: white;
+            padding: 16px 48px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: rgb(218, 36, 36);
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: #111827;
+            color: #9ca3af;
+            padding: 60px 20px 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: #fff;
+            margin-bottom: 24px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 42px;
+            }
+
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .story-content h2, .section-header h2, .cta-section h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body class="about">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="index.html">Modern Clothes</a>
+            
+            <a href="#" class="login-button d-none d-lg-block"><span data-translate="navLogin">Login</span></a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Modern Clothes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="index.html"><span data-translate="navHome">Home</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span data-translate="footerCategories">Category</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="men.html"><span data-translate="navMen">Men</span></a></li>
+                                <li><a class="dropdown-item" href="women.html"><span data-translate="navWomen">Women</span></a></li>
+                                <li><a class="dropdown-item" href="kids.html"><span data-translate="navKids">Kids</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2 active" href="about.html"><span data-translate="navAbout">About Us</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="contact.html"><span data-translate="navContact">Contact Us</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span data-translate="navLanguage">English</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item kh" href="#">Khmer</a></li>
+                                <li><a class="dropdown-item us" href="#">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#" class="login-button d-lg-none mt-3"><span data-translate="navLogin">Login</span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>About Modern Clothes</h1>
+            <p>We are passionate about delivering high-quality fashion that empowers people to express their unique style and confidence.</p>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content">
+                    <h2>Our Story</h2>
+                    <p>
+                        Founded in 2015, Modern Clothes began with a simple mission: to make fashion accessible, 
+                        sustainable, and stylish for everyone. What started as a small boutique has grown into a 
+                        beloved fashion destination serving thousands of customers worldwide.
+                    </p>
+                    <p>
+                        We believe that great style shouldn't come at the expense of quality or ethics. That's why 
+                        we carefully curate our collections, working with responsible manufacturers and selecting 
+                        materials that are both beautiful and sustainable.
+                    </p>
+                    <p>
+                        Today, Modern Clothes continues to evolve, always staying true to our core values of 
+                        quality, sustainability, and exceptional customer service.
+                    </p>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXNoaW9uJTIwc3RvcmV8ZW58MXx8fHwxNzY3MjQzMzg4fDA&ixlib=rb-4.1.0&q=80&w=1080" alt="Our Store" class="story-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>50K+</h3>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10K+</h3>
+                    <p>Products Sold</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Fashion Brands</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15</h3>
+                    <p>Countries Served</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Values</h2>
+                <p>The principles that guide everything we do</p>
+            </div>
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">✨</div>
+                    <h3>Quality First</h3>
+                    <p>We never compromise on quality. Every piece is carefully selected and tested to ensure it meets our high standards.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Sustainability</h3>
+                    <p>We're committed to reducing our environmental impact through responsible sourcing and eco-friendly practices.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💎</div>
+                    <h3>Authenticity</h3>
+                    <p>We believe in being genuine and transparent in all our dealings, from sourcing to customer service.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🎨</div>
+                    <h3>Innovation</h3>
+                    <p>We constantly seek new ways to bring you the latest trends while staying ahead of the fashion curve.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Community</h3>
+                    <p>We build lasting relationships with our customers, partners, and the communities we serve.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">❤️</div>
+                    <h3>Customer Care</h3>
+                    <p>Your satisfaction is our priority. We go above and beyond to ensure you have an amazing experience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <p>The people behind Modern Clothes</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvbWFuJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY3MjQzMzg5fDA&ixlib=rb-4.1.0&q=80&w=400" alt="Team Member" class="team-image">
+                    <h4>Sarah Johnson</h4>
+                    <p>Founder & CEO</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2NzI0MzM5MHww&ixlib=rb-4.1.0&q=80&w=400" alt="Team Member" class="team-image">
+                    <h4>Michael Chen</h4>
+                    <p>Creative Director</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHdvbWFuJTIwcG9ydHJhaXR8ZW58MXx8fHwxNjcyNDMzODl8MA&ixlib=rb-4.1.0&q=80&w=400" alt="Team Member" class="team-image">
+                    <h4>Emily Rodriguez</h4>
+                    <p>Head of Marketing</p>
+                </div>
+                <div class="team-card">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMG1hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2NzI0MzM5MHww&ixlib=rb-4.1.0&q=80&w=400" alt="Team Member" class="team-image">
+                    <h4>David Kim</h4>
+                    <p>Operations Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Shop?</h2>
+            <p>Discover our latest collections and find your perfect style</p>
+            <a href="index.html" class="cta-btn">Start Shopping</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Modern Clothes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    
+    <!-- Language Switcher Script -->
+    <script src="language-switch.js"></script>
+</body>
+</html>

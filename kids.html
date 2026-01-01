@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids Collection - Modern Clothes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="kids">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top bg-white shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand me-auto" href="index.html">Modern Clothes</a>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Modern Clothes</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="index.html"><span data-translate="navHome">Home</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span data-translate="footerCategories">Category</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="men.html"><span data-translate="navMen">Men</span></a></li>
+                                <li><a class="dropdown-item" href="women.html"><span data-translate="navWomen">Women</span></a></li>
+                                <li><a class="dropdown-item active" href="kids.html"><span data-translate="navKids">Kids</span></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="about.html"><span data-translate="navAbout">About Us</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="contact.html"><span data-translate="navContact">Contact Us</span></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link mx-lg-2 dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <span data-translate="navLanguage">English</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item kh" href="#">Khmer</a></li>
+                                <li><a class="dropdown-item us" href="#">English</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a href="#" class="login-button d-lg-none mt-3"><span data-translate="navLogin">Login</span></a>
+                </div>
+            </div>
+            
+            <a href="#" class="login-button ms-3 d-none d-lg-block"><span data-translate="navLogin">Login</span></a>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a> / <span>Kids</span>
+        </div>
+    </div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Kids Collection</h1>
+        <p>Comfortable and playful clothing for children</p>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Sidebar Filters -->
+        <aside class="sidebar">
+            <div class="filter-toggle" id="filterToggle">
+                <span>Filters</span>
+                <i class="toggle-icon" id="toggleIcon">▼</i>
+            </div>
+            <div class="filter-section">
+                <h3>Categories</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="tops" checked>
+                    <label for="tops">Tops & T-Shirts</label>
+                    <span class="filter-count">(26)</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="bottoms">
+                    <label for="bottoms">Pants & Shorts</label>
+                    <span class="filter-count">(20)</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="dresses">
+                    <label for="dresses">Dresses</label>
+                    <span class="filter-count">(16)</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="outerwear">
+                    <label for="outerwear">Jackets & Hoodies</label>
+                    <span class="filter-count">(14)</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="sets">
+                    <label for="sets">Sets & Outfits</label>
+                    <span class="filter-count">(12)</span>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Age Group</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="baby">
+                    <label for="baby">Baby (0-2 yrs)</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="toddler">
+                    <label for="toddler">Toddler (2-4 yrs)</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="kids">
+                    <label for="kids">Kids (5-8 yrs)</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="tweens">
+                    <label for="tweens">Tweens (9-12 yrs)</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Gender</h3>
+                <div class="filter-option">
+                    <input type="checkbox" id="boys">
+                    <label for="boys">Boys</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="girls">
+                    <label for="girls">Girls</label>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="unisex">
+                    <label for="unisex">Unisex</label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="number" class="price-input" placeholder="Min" value="0">
+                    <span>-</span>
+                    <input type="number" class="price-input" placeholder="Max" value="200">
+                </div>
+            </div>
+
+            <button class="filter-btn">Apply Filters</button>
+        </aside>
+
+        <!-- Products Section -->
+        <div class="products-section">
+            <div class="products-header">
+                <div class="products-count">Showing 1-12 of 42 products</div>
+                <select class="sort-select">
+                    <option>Sort by: Featured</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Newest First</option>
+                    <option>Best Selling</option>
+                </select>
+            </div>
+
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/download (10).jpg" alt="Colorful T-Shirt Set">
+                        <span class="product-tag new">New</span>
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">PLAYFUL KIDS</div>
+                        <div class="product-name">Colorful T-Shirt Set</div>
+                        <div class="product-price">$34.99</div>
+                        <div class="product-colors">
+                            <div class="color-dot" style="background: #ef4444;"></div>
+                            <div class="color-dot" style="background: #3b82f6;"></div>
+                            <div class="color-dot" style="background: #22c55e;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/download (11).jpg" alt="Denim Overall Dress">
+                        <span class="product-tag sale">Sale -20%</span>
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">CUTE STYLE</div>
+                        <div class="product-name">Denim Overall Dress</div>
+                        <div class="product-price sale">
+                            <span class="original">$49.99</span>
+                            <span class="discount">$39.99</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3-12 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/download (12).jpg" alt="Graphic Print Hoodie">
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">FUN WEAR</div>
+                        <div class="product-name">Graphic Print Hoodie</div>
+                        <div class="product-price">$44.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/download (13).jpg" alt="Cargo Shorts">
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">ACTIVE KIDS</div>
+                        <div class="product-name">Cargo Shorts</div>
+                        <div class="product-price">$24.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/Boys Letter Print Drop Shoulder Thermal Sweatshirt.jpg" alt="Floral Summer Dress">
+                        <span class="product-tag new">New</span>
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">SWEET GIRL</div>
+                        <div class="product-name">Floral Summer Dress</div>
+                        <div class="product-price">$39.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/Boys Corduroy Jacket And Pants Set, Korean Style Tracksuit, Kids Christmas Outfit, Kids Christmas Sweater, Boys Christmas Clothes, Boys Joggers, Boys Christmas Pants.jpg" alt="Sport Tracksuit">
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">SPORTY KIDS</div>
+                        <div class="product-name">Sport Tracksuit</div>
+                        <div class="product-price">$54.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/Tween Boy Khaki Japanese-Korean College Badge Long Sleeve Coat And Pant Two-Piece Suit Suitable For Sports Suitable For Fall And Winter Season.jpg" alt="Striped Polo Shirt">
+                        <span class="product-tag sale">Sale -15%</span>
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">CLASSIC KIDS</div>
+                        <div class="product-name">Striped Polo Shirt</div>
+                        <div class="product-price sale">
+                            <span class="original">$29.99</span>
+                            <span class="discount">$25.49</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/2pcs Kids Boys Casual Daily & Holiday Solid Color Print Graphic Tee & Loose Shorts Set, Comfortable And Versatile For School, Garden, Beach, Birthday, Spring_Summer_Autumn_Winter.jpg" alt="Winter Puffer Jacket">
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">COZY WEAR</div>
+                        <div class="product-name">Winter Puffer Jacket</div>
+                        <div class="product-price">$74.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/2pcs_Set Young Boy Kids Comfortable, Breathable, Casual, Versatile, Elegant, And Minimalist Style With Color Blocking Short Sleeves, Polo Shirts, Knitted Tops, Shirts, And Shorts Set, Suitable For Spring And Summ.jpg" alt="Dinosaur Print Pajamas">
+                        <span class="product-tag new">New</span>
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">SLEEP TIGHT</div>
+                        <div class="product-name">Dinosaur Print Pajamas</div>
+                        <div class="product-price">$32.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/3pcs Young Boys Casual Outfits Set_ Graphic Print Utility Vest, Striped Sweatshirt, And Cargo Pants - Perfect For Back To School, Daily Wear, School, Kids Clothes, Suitable For Autumn & Winter _ SHEIN USA.jpg" alt="Leggings Set">
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">ACTIVE GIRL</div>
+                        <div class="product-name">Leggings Set</div>
+                        <div class="product-price">$36.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/3pcs Young Boys Casual Outfits Set_ Graphic Print Utility Vest, Striped Sweatshirt, And Cargo Pants - Perfect For Back To School, Daily Wear, School, Kids Clothes, Suitable For Autumn & Winter _ SHEIN USA (1).jpg" alt="School Uniform Set">
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">SCHOOL PRIDE</div>
+                        <div class="product-name">School Uniform Set</div>
+                        <div class="product-price">$59.99</div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="assets/kid picture/3pcs Young Boys Casual Outfits Set_ Graphic Print Utility Vest, Striped Sweatshirt, And Cargo Pants - Perfect For Back To School, Daily Wear, School, Kids Clothes, Suitable For Autumn & Winter _ SHEIN USA (2).jpg" alt="Party Tutu Dress">
+                        <span class="product-tag sale">Sale -25%</span>
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">PRINCESS</div>
+                        <div class="product-name">Party Tutu Dress</div>
+                        <div class="product-price sale">
+                            <span class="original">$79.99</span>
+                            <span class="discount">$59.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button>❮ Previous</button>
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>Next ❯</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul class="footer-links">
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Help</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Customer Service</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Modern Clothes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        // Product data with attributes for filtering
+        const allProducts = [];
+        
+        // Initialize products with data attributes
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            const name = card.querySelector('.product-name').textContent;
+            const priceText = card.querySelector('.product-price').textContent.replace('$', '').replace(/[^\d.]/g, '');
+            const price = parseFloat(priceText);
+            const brand = card.querySelector('.product-brand')?.textContent || '';
+            const hasTag = card.querySelector('.product-tag');
+            const tag = hasTag ? hasTag.textContent : '';
+            
+            // Assign categories
+            let category = 'tops';
+            if (index % 5 === 1) category = 'bottoms';
+            if (index % 5 === 2) category = 'dresses';
+            if (index % 5 === 3) category = 'outerwear';
+            if (index % 5 === 4) category = 'sets';
+            
+            // Assign age groups
+            const ageGroups = ['baby', 'toddler', 'kids', 'tweens'];
+            const ageGroup = ageGroups[index % 4];
+            
+            // Assign gender
+            const genders = ['boys', 'girls', 'unisex'];
+            const gender = genders[index % 3];
+            
+            allProducts.push({
+                element: card,
+                name,
+                price,
+                brand,
+                category,
+                ageGroup,
+                gender,
+                tag,
+                index
+            });
+            
+            card.dataset.category = category;
+            card.dataset.price = price;
+            card.dataset.ageGroup = ageGroup;
+            card.dataset.gender = gender;
+        });
+        
+        // Filter and Sort functionality
+        function applyFiltersAndSort() {
+            const selectedCategories = [];
+            document.querySelectorAll('.filter-section:nth-child(2) input[type="checkbox"]:checked').forEach(cb => {
+                selectedCategories.push(cb.id);
+            });
+            
+            const selectedAgeGroups = [];
+            document.querySelectorAll('.filter-section:nth-child(3) input[type="checkbox"]:checked').forEach(cb => {
+                selectedAgeGroups.push(cb.id);
+            });
+            
+            const selectedGenders = [];
+            document.querySelectorAll('.filter-section:nth-child(4) input[type="checkbox"]:checked').forEach(cb => {
+                selectedGenders.push(cb.id);
+            });
+            
+            const minPrice = parseFloat(document.querySelector('.price-range input:first-child').value) || 0;
+            const maxPrice = parseFloat(document.querySelector('.price-range input:last-child').value) || 999999;
+            
+            let filteredProducts = allProducts.filter(product => {
+                if (selectedCategories.length > 0 && !selectedCategories.includes(product.category)) {
+                    return false;
+                }
+                
+                if (selectedAgeGroups.length > 0 && !selectedAgeGroups.includes(product.ageGroup)) {
+                    return false;
+                }
+                
+                if (selectedGenders.length > 0 && !selectedGenders.includes(product.gender)) {
+                    return false;
+                }
+                
+                if (product.price < minPrice || product.price > maxPrice) {
+                    return false;
+                }
+                
+                return true;
+            });
+            
+            const sortValue = document.querySelector('.sort-select').value;
+            if (sortValue.includes('Low to High')) {
+                filteredProducts.sort((a, b) => a.price - b.price);
+            } else if (sortValue.includes('High to Low')) {
+                filteredProducts.sort((a, b) => b.price - a.price);
+            } else if (sortValue.includes('Newest')) {
+                filteredProducts.sort((a, b) => b.index - a.index);
+            } else if (sortValue.includes('Best Selling')) {
+                filteredProducts.sort((a, b) => {
+                    const aHasSale = a.tag.toLowerCase().includes('sale');
+                    const bHasSale = b.tag.toLowerCase().includes('sale');
+                    if (aHasSale && !bHasSale) return -1;
+                    if (!aHasSale && bHasSale) return 1;
+                    return 0;
+                });
+            }
+            
+            allProducts.forEach(product => {
+                product.element.style.display = 'none';
+            });
+            
+            filteredProducts.forEach(product => {
+                product.element.style.display = 'block';
+            });
+            
+            const totalProducts = allProducts.length;
+            const visibleProducts = filteredProducts.length;
+            const countText = visibleProducts === totalProducts 
+                ? `Showing all ${totalProducts} products`
+                : `Showing ${visibleProducts} of ${totalProducts} products`;
+            document.querySelector('.products-count').textContent = countText;
+        }
+        
+        document.querySelector('.filter-btn').addEventListener('click', applyFiltersAndSort);
+        document.querySelector('.sort-select').addEventListener('change', applyFiltersAndSort);
+        
+        document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', applyFiltersAndSort);
+        });
+        
+        document.querySelectorAll('.price-input').forEach(input => {
+            input.addEventListener('change', applyFiltersAndSort);
+        });
+        
+        document.querySelectorAll('.quick-view').forEach((button, index) => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const productId = 'k' + (Math.floor(index / 2) + 1);
+                window.location.href = 'product-detail.html?id=' + productId;
+            });
+        });
+
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('.action-btn') && !e.target.closest('.quick-view')) {
+                    const productId = 'k' + (Math.floor(index / 2) + 1);
+                    window.location.href = 'product-detail.html?id=' + productId;
+                }
+            });
+        });
+
+        // Toggle sidebar filter sections
+        const filterSections = document.querySelectorAll('.filter-section');
+        const toggleBtn = document.getElementById('filterToggle');
+        const toggleIcon = document.getElementById('toggleIcon');
+        let isOpen = true;
+
+        toggleBtn.addEventListener('click', function() {
+            isOpen = !isOpen;
+            filterSections.forEach(section => {
+                section.style.display = isOpen ? 'block' : 'none';
+            });
+            document.querySelector('.filter-btn').style.display = isOpen ? 'block' : 'none';
+            toggleIcon.textContent = isOpen ? '▲' : '▼';
+        });
+        
+        applyFiltersAndSort();
+    </script>
+    
+    <!-- Language Switcher Script -->
+    <script src="language-switch.js"></script>
+</body>
+</html>
