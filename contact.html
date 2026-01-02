@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Modern Clothes</title>
+    <title>ទំនាក់ទំនង - Modern Clothes</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
@@ -298,8 +298,8 @@
     <!-- Page Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you. Get in touch with our team for any questions, feedback, or assistance.</p>
+            <h1 data-translate="contactUsHeading">ទំនាក់ទំនង</h1>
+            <p data-translate="contactHeroDescription">យើងចង់ស្តាប់ពីអ្នក។ ទាក់ទងជាមួយក្រុមរបស់យើងសម្រាប់សំណួរ មតិយោបល់ ឬជំនួយណាមួយ។</p>
         </div>
     </section>
 
@@ -309,32 +309,32 @@
             <div class="contact-grid">
                 <!-- Contact Info -->
                 <div class="contact-info">
-                    <h2>Get in Touch</h2>
+                    <h2>ទាក់ទងជាមួយយើង</h2>
                     <p>
-                        Have a question about our products, shipping, or returns? Our customer service team 
-                        is here to help. Reach out to us through any of the channels below.
+                        តើអ្នកមានសំណួរអំពីផលិតផល ការដឹកជញ្ជូន ឬការត្រឡប់ទំនិញទេ? ក្រុមបម្រើអតិថិជនរបស់យើង 
+                        នៅទីនេះដើម្បីជួយអ្នក។ ទាក់ទងមកយើងតាមរយៈឆានែលណាមួយខាងក្រោម។
                     </p>
 
                     <div class="info-item">
                         <div class="info-icon">📍</div>
                         <div class="info-content">
-                            <h3>Visit Us</h3>
-                            <p>123 Fashion Street<br>New York, NY 10001<br>United States</p>
+                            <h3>មកលើកស្រង់យើង</h3>
+                            <p>123 វិថីម៉ូដ<br>ញូវយ៉ក, NY 10001<br>សហរដ្ឋអាមេរិក</p>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <div class="info-icon">📞</div>
                         <div class="info-content">
-                            <h3>Call Us</h3>
-                            <p><a href="tel:+1234567890">+1 (234) 567-890</a><br>Mon-Fri: 9AM - 6PM EST</p>
+                            <h3>ហៅយើង</h3>
+                            <p><a href="tel:+1234567890">+1 (234) 567-890</a><br>ចន្ទ-សុក្រ: 9AM - 6PM EST</p>
                         </div>
                     </div>
 
                     <div class="info-item">
                         <div class="info-icon">✉️</div>
                         <div class="info-content">
-                            <h3>Email Us</h3>
+                            <h3>អ៊ីមែលមកយើង</h3>
                             <p>
                                 <a href="mailto:support@modernclothes.com">support@modernclothes.com</a><br>
                                 <a href="mailto:info@modernclothes.com">info@modernclothes.com</a>
@@ -345,8 +345,8 @@
                     <div class="info-item">
                         <div class="info-icon">⏰</div>
                         <div class="info-content">
-                            <h3>Business Hours</h3>
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed</p>
+                            <h3>ម៉ោងធ្វើការ</h3>
+                            <p>ចន្ទ - សុក្រ: 9:00 AM - 6:00 PM<br>សៅរ៍: 10:00 AM - 4:00 PM<br>អាទិត្យ: បិទ</p>
                         </div>
                     </div>
 
@@ -360,43 +360,43 @@
 
                 <!-- Contact Form -->
                 <div class="contact-form">
-                    <h2>Send Us a Message</h2>
+                    <h2 data-translate="contactFormTitle">ផ្ញើសារមកយើង</h2>
                     <form onsubmit="return handleSubmit(event)">
                         <div class="form-group">
-                            <label for="name">Full Name *</label>
+                            <label for="name" data-translate="contactName">ឈ្មោះពេញ *</label>
                             <input type="text" id="name" name="name" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email Address *</label>
+                            <label for="email" data-translate="contactEmail">អាសយដ្ឋានអ៊ីមែល *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
+                            <label for="phone">លេខទូរស័ព្ទ</label>
                             <input type="tel" id="phone" name="phone">
                         </div>
 
                         <div class="form-group">
-                            <label for="subject">Subject *</label>
+                            <label for="subject" data-translate="contactSubject">ប្រធានបទ *</label>
                             <select id="subject" name="subject" required>
-                                <option value="">Select a subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="order">Order Status</option>
-                                <option value="product">Product Question</option>
-                                <option value="return">Returns & Exchanges</option>
-                                <option value="shipping">Shipping Information</option>
-                                <option value="feedback">Feedback</option>
-                                <option value="other">Other</option>
+                                <option value="">ជ្រើសរើសប្រធានបទ</option>
+                                <option value="general">សំណួរទូទៅ</option>
+                                <option value="order">ស្ថានភាពការបញ្ជាទិញ</option>
+                                <option value="product">សំណួរអំពីផលិតផល</option>
+                                <option value="return">ការត្រឡប់ទំនិញ និងការផ្លាស់ប្តូរ</option>
+                                <option value="shipping">ព័ត៌មានការដឹកជញ្ជូន</option>
+                                <option value="feedback">មតិយោបល់</option>
+                                <option value="other">ផ្សេងៗ</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message *</label>
+                            <label for="message" data-translate="contactMessage">សារ *</label>
                             <textarea id="message" name="message" required></textarea>
                         </div>
 
-                        <button type="submit" class="submit-btn">Send Message</button>
+                        <button type="submit" class="submit-btn" data-translate="contactSend">ផ្ញើសារ</button>
                     </form>
                 </div>
             </div>
@@ -408,8 +408,8 @@
         <div class="container">
             <div class="map-container">
                 <div class="map-placeholder">
-                    🗺️ Map Location<br>
-                    <small style="font-size: 16px;">123 Fashion Street, New York, NY 10001</small>
+                    🗺️ ទីតាំងផែនទី<br>
+                    <small style="font-size: 16px;">123 វិថីម៉ូដ, ញូវយ៉ក, NY 10001</small>
                 </div>
             </div>
         </div>
@@ -419,62 +419,61 @@
     <section class="faq-section">
         <div class="container">
             <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions</p>
+                <h2 data-translate="contactFAQTitle">សំណួរដែលសួរញឹកញាប់</h2>
+                <p>ចម្លើយរហ័សសម្រាប់សំណួរទូទៅ</p>
             </div>
             <div class="faq-grid">
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>What are your shipping options?</span>
+                        <span>តើមានជម្រើសដឹកជញ្ជូនអ្វីខ្លះ?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        We offer standard shipping (5-7 business days) and express shipping (2-3 business days). 
-                        Free standard shipping is available on orders over $50. International shipping is also available.
+                        យើងផ្តល់ជូនការដឹកជញ្ជូនស្តង់ដារ (5-7 ថ្ងៃធ្វើការ) និងការដឹកជញ្ជូនរហ័ស (2-3 ថ្ងៃធ្វើការ)។ 
+                        ការដឹកជញ្ជូនស្តង់ដារឥតគិតថ្លៃអាចរកបានសម្រាប់ការបញ្ជាទិញលើស $50។ ការដឹកជញ្ជូនអន្តរជាតិក៏មានផងដែរ។
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>What is your return policy?</span>
+                        <span>តើគោលការណ៍ត្រឡប់ទំនិញរបស់អ្នកគឺជាអ្វី?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        We accept returns within 30 days of purchase. Items must be unworn, unwashed, and in original 
-                        condition with tags attached. Free returns are available for defective items.
+                        យើងទទួលយកការត្រឡប់ទំនិញវិញក្នុងរយៈពេល 30 ថ្ងៃនៃការទិញ។ ទំនិញត្រូវតែមិនទាន់ពាក់ មិនទាន់បោកគក់ និងស្ថិតក្នុងស្ថានភាពដើមជាមួយនឹងស្លាកសញ្ញាភ្ជាប់មកជាមួយ។ ការត្រឡប់ទំនិញវិញដោយឥតគិតថ្លៃគឺអាចរកបានសម្រាប់ទំនិញដែលមានបញ្ហា។
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>How can I track my order?</span>
+                        <span>តើខ្ញុំអាចតាមដានការបញ្ជាទិញរបស់ខ្ញុំដោយរបៀបណា?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        Once your order ships, you'll receive a tracking number via email. You can use this number 
-                        on our website or the carrier's website to track your package in real-time.
+                        នៅពេលដែលការបញ្ជាទិញរបស់អ្នកត្រូវបានដឹកជញ្ជូន អ្នកនឹងទទួលបានលេខតាមដានតាមរយៈអ៊ីមែល។ អ្នកអាចប្រើលេខនេះ 
+                        នៅលើគេហទំព័ររបស់យើង ឬគេហទំព័ររបស់ក្រុមហ៊ុនដឹកជញ្ជូនដើម្បីតាមដានកញ្ចប់របស់អ្នកតាមពេលវេលាពិត។
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>Do you offer gift cards?</span>
+                        <span>តើអ្នកមានប័ណ្ណអំណោយទេ?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        Yes! Gift cards are available in various denominations and can be purchased online or in-store. 
-                        They never expire and can be used for any purchase.
+                        បាទ/ចាស! ប័ណ្ណអំណោយមាននៅក្នុងតម្លៃផ្សេងៗ ហើយអាចទិញបានតាមអ៊ីនធឺណិត ឬនៅក្នុងហាង។ 
+                        ពួកវាមិនដែលផុតកំណត់ទេ ហើយអាចប្រើសម្រាប់ការទិញណាមួយបាន។
                     </div>
                 </div>
 
                 <div class="faq-item" onclick="toggleFaq(this)">
                     <div class="faq-question">
-                        <span>What payment methods do you accept?</span>
+                        <span>តើអ្នកទទួលយកវិធីបង់ប្រាក់អ្វីខ្លះ?</span>
                         <span class="faq-icon">+</span>
                     </div>
                     <div class="faq-answer">
-                        We accept all major credit cards (Visa, MasterCard, American Express, Discover), PayPal, 
-                        Apple Pay, Google Pay, and gift cards.
+                        យើងទទួលយកកាតឥណទានធំៗទាំងអស់ (Visa, MasterCard, American Express, Discover), PayPal, 
+                        Apple Pay, Google Pay, និងប័ណ្ណអំណោយ។
                     </div>
                 </div>
             </div>
@@ -486,34 +485,34 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>Shop</h3>
+                    <h3>ទិញ</h3>
                     <ul class="footer-links">
-                        <li><a href="women.html">Women</a></li>
-                        <li><a href="men.html">Men</a></li>
-                        <li><a href="kids.html">Kids</a></li>
-                        <li><a href="#">Sale</a></li>
+                        <li><a href="women.html">នារី</a></li>
+                        <li><a href="men.html">បុរស</a></li>
+                        <li><a href="kids.html">កុមារ</a></li>
+                        <li><a href="#">លក់បញ្ចុះតម្លៃ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Help</h3>
+                    <h3>ជំនួយ</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Customer Service</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">សេវាកម្មអតិថិជន</a></li>
+                        <li><a href="#">ព័ត៌មានការដឹកជញ្ជូន</a></li>
+                        <li><a href="#">ការត្រឡប់វិញ</a></li>
+                        <li><a href="#">មគ្គុទ្ទេសក៍ទំហំ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Company</h3>
+                    <h3>ក្រុមហ៊ុន</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">អំពីយើង</a></li>
+                        <li><a href="#">អាជីពការងារ</a></li>
+                        <li><a href="contact.html">ទំនាក់ទំនង</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Modern Clothes. All rights reserved.</p>
+                <p>© 2025 Modern Clothes. រក្សាសិទ្ធិគ្រប់បែបយ៉ាង។</p>
             </div>
         </div>
     </footer>
@@ -525,7 +524,7 @@
     <script>
         function handleSubmit(event) {
             event.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
+            alert('អរគុណសម្រាប់សាររបស់អ្នក! យើងនឹងឆ្លើយតបទៅអ្នកក្នុងរយៈពេល 24 ម៉ោង។');
             event.target.reset();
             return false;
         }

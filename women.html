@@ -273,8 +273,8 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 32px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
 
         .product-card {
@@ -567,20 +567,24 @@
             </div>
             
             <a href="#" class="login-button ms-3 d-none d-lg-block"><span data-translate="navLogin">Login</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
     </nav>
 
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="index.html">Home</a> / <span>Women</span>
+            <a href="index.html" data-translate="home">Home</a> / <span data-translate="womenCollection">Women</span>
         </div>
     </div>
 
     <!-- Page Header -->
     <section class="page-header">
-        <h1>Women's Collection</h1>
-        <p>Discover elegant and trendy styles for every occasion</p>
+        <h1 data-translate="womenCollectionHeading">Women's Collection</h1>
+        <p data-translate="womenDescription">Discover elegant and trendy styles for every occasion</p>
     </section>
 
     <!-- Main Content -->
@@ -848,6 +852,234 @@
 
                 <div class="product-card">
                     <div class="product-image">
-                        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-                            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-                        <link rel="stylesheet" href="styles.css">
+                        <img src="assets/women picture/download (13).jpg" alt="Knit Sweater">
+                        <span class="product-tag sale">Sale -20%</span>
+                        <button class="quick-view">Quick View</button>
+                        <div class="product-actions">
+                            <button class="action-btn">❤️</button>
+                            <button class="action-btn">🛒</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-brand">COZY CO.</div>
+                        <div class="product-name">Knit Sweater</div>
+                        <div class="product-price sale">
+                            <span class="original">$69.99</span>
+                            <span class="discount">$55.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>Next</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 data-translate="footerAbout">About Us</h3>
+                    <p data-translate="footerAboutText">Modern Clothes is your destination for premium fashion. We offer the latest trends in clothing for women, men, and kids.</p>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footerQuick">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="navHome">Home</a></li>
+                        <li><a href="about.html" data-translate="navAbout">About Us</a></li>
+                        <li><a href="contact.html" data-translate="navContact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footerCategories">Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="women.html" data-translate="navWomen">Women</a></li>
+                        <li><a href="men.html" data-translate="navMen">Men</a></li>
+                        <li><a href="kids.html" data-translate="navKids">Kids</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footerHelp">Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-translate="footerFAQ">FAQ</a></li>
+                        <li><a href="#" data-translate="footerShipping">Shipping Info</a></li>
+                        <li><a href="#" data-translate="footerReturns">Returns</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footerCopyright">© 2024 Modern Clothes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script>
+        // Product data with attributes for filtering
+        const allProducts = [];
+        
+        // Initialize products with data attributes
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            const name = card.querySelector('.product-name').textContent;
+            const priceText = card.querySelector('.product-price').textContent.replace('$', '').replace(/[^\d.]/g, '');
+            const price = parseFloat(priceText);
+            const brand = card.querySelector('.product-brand')?.textContent || '';
+            const hasTag = card.querySelector('.product-tag');
+            const tag = hasTag ? hasTag.textContent : '';
+            
+            // Assign categories
+            let category = 'dresses';
+            if (index % 5 === 1) category = 'blouses';
+            if (index % 5 === 2) category = 'jeans';
+            if (index % 5 === 3) category = 'jackets';
+            if (index % 5 === 4) category = 'skirts';
+            
+            // Assign colors
+            const colorDots = card.querySelectorAll('.color-dot');
+            const colors = [];
+            colorDots.forEach(dot => {
+                const bg = window.getComputedStyle(dot).backgroundColor;
+                if (bg.includes('0,0,0')) colors.push('black');
+                if (bg.includes('220, 38, 38')) colors.push('red');
+                if (bg.includes('59, 130, 246')) colors.push('blue');
+                if (bg.includes('168, 85, 247')) colors.push('purple');
+                if (bg.includes('248, 113, 113')) colors.push('pink');
+                if (bg.includes('107, 114, 128')) colors.push('gray');
+            });
+            
+            // Assign sizes
+            const sizes = ['xs', 's', 'm', 'l', 'xl', 'xxl'];
+            
+            allProducts.push({
+                element: card,
+                name,
+                price,
+                brand,
+                category,
+                colors: colors.join(','),
+                sizes: sizes.join(','),
+                index
+            });
+            
+            card.dataset.category = category;
+            card.dataset.price = price;
+            card.dataset.colors = colors.join(',');
+            card.dataset.sizes = sizes.join(',');
+        });
+        
+        // Filter and Sort functionality
+        function applyFiltersAndSort() {
+            const selectedCategories = [];
+            document.querySelectorAll('.filter-section:nth-child(2) input[type="checkbox"]:checked').forEach(cb => {
+                selectedCategories.push(cb.id);
+            });
+            
+            const selectedSizes = [];
+            document.querySelectorAll('.filter-section:nth-child(3) input[type="checkbox"]:checked').forEach(cb => {
+                selectedSizes.push(cb.id);
+            });
+            
+            const selectedColors = [];
+            document.querySelectorAll('.filter-section:nth-child(5) input[type="checkbox"]:checked').forEach(cb => {
+                selectedColors.push(cb.id);
+            });
+            
+            const minPrice = parseFloat(document.querySelector('.price-range input:first-child').value) || 0;
+            const maxPrice = parseFloat(document.querySelector('.price-range input:last-child').value) || 999999;
+            
+            let filteredProducts = allProducts.filter(product => {
+                if (selectedCategories.length > 0 && !selectedCategories.includes(product.category)) return false;
+                if (product.price < minPrice || product.price > maxPrice) return false;
+                if (selectedSizes.length > 0) {
+                    const productSizes = product.sizes.split(',');
+                    if (!selectedSizes.some(size => productSizes.includes(size))) return false;
+                }
+                if (selectedColors.length > 0) {
+                    const productColors = product.colors.split(',');
+                    if (!selectedColors.some(color => productColors.includes(color))) return false;
+                }
+                return true;
+            });
+            
+            const sortValue = document.querySelector('.sort-select').value;
+            if (sortValue.includes('Low to High')) {
+                filteredProducts.sort((a, b) => a.price - b.price);
+            } else if (sortValue.includes('High to Low')) {
+                filteredProducts.sort((a, b) => b.price - a.price);
+            } else if (sortValue.includes('Newest')) {
+                filteredProducts.sort((a, b) => b.index - a.index);
+            } else if (sortValue.includes('Best Selling')) {
+                filteredProducts.sort(() => Math.random() - 0.5);
+            }
+            
+            allProducts.forEach(product => {
+                product.element.style.display = 'none';
+            });
+            
+            filteredProducts.forEach(product => {
+                product.element.style.display = 'block';
+            });
+            
+            const totalProducts = allProducts.length;
+            const visibleProducts = filteredProducts.length;
+            const countText = visibleProducts === totalProducts 
+                ? `Showing 1-${totalProducts} of ${totalProducts} products`
+                : `Showing ${visibleProducts} of ${totalProducts} products`;
+            document.querySelector('.products-count').textContent = countText;
+        }
+        
+        document.querySelector('.filter-btn').addEventListener('click', applyFiltersAndSort);
+        document.querySelector('.sort-select').addEventListener('change', applyFiltersAndSort);
+        
+        document.querySelectorAll('.filter-option input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', applyFiltersAndSort);
+        });
+        
+        document.querySelectorAll('.price-input').forEach(input => {
+            input.addEventListener('change', applyFiltersAndSort);
+        });
+        
+        document.querySelectorAll('.quick-view').forEach((button, index) => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const productId = 'w' + (index + 1);
+                window.location.href = 'product-detail.html?id=' + productId;
+            });
+        });
+
+        document.querySelectorAll('.product-card').forEach((card, index) => {
+            card.style.cursor = 'pointer';
+        });
+
+        // Toggle sidebar filter sections
+        const filterSections = document.querySelectorAll('.filter-section');
+        const toggleBtn = document.getElementById('filterToggle');
+        const toggleIcon = document.getElementById('toggleIcon');
+        let isOpen = true;
+
+        toggleBtn.addEventListener('click', function() {
+            isOpen = !isOpen;
+            filterSections.forEach(section => {
+                section.style.display = isOpen ? 'block' : 'none';
+            });
+            document.querySelector('.filter-btn').style.display = isOpen ? 'block' : 'none';
+            toggleIcon.textContent = isOpen ? '▲' : '▼';
+        });
+        
+        applyFiltersAndSort();
+    </script>
+    
+    <!-- Language Switcher Script -->
+    <script src="language-switch.js"></script>
+</body>
+</html>

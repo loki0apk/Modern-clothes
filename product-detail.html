@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Details - Modern Clothes</title>
+    <title>ព័ត៌មានលម្អិតផលិតផល - Modern Clothes</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -66,9 +66,9 @@
     <!-- Breadcrumb -->
     <div class="breadcrumb-custom">
         <div class="container">
-            <a href="index.html">Home</a> / 
-            <a href="women.html">Women</a> / 
-            <span style="color: #000;">Elegant Summer Dress</span>
+            <a href="index.html" data-translate="home">ទំព័រដើម</a> / 
+            <a href="women.html" data-translate="womenCollection">ស្រ្តី</a> / 
+            <span style="color: #000;">សម្លៀកបំពាក់ក្នុងរដូវក្តៅដ៏ស្រស់ស្អាត</span>
         </div>
     </div>
 
@@ -93,27 +93,27 @@
                 <div class="col-lg-6">
                     <div class="product-info">
                         <div class="product-brand">ELEGANCE</div>
-                        <h1 class="product-title">Elegant Summer Dress</h1>
+                        <h1 class="product-title">សម្លៀកបំពាក់ក្នុងរដូវក្តៅដ៏ស្រស់ស្អាត</h1>
                         
                         <div class="product-rating">
                             <div class="stars">★★★★★</div>
-                            <span class="rating-count">(4.8) 124 reviews</span>
+                            <span class="rating-count">(4.8) 124 មតិយោបល់</span>
                         </div>
 
                         <div class="product-price">
                             $89.99
                         </div>
 
-                        <p class="product-description">
-                            Elevate your summer wardrobe with this elegant dress. Crafted from premium fabric with 
-                            attention to detail, this dress features a flattering silhouette that's perfect for any 
-                            occasion. The breathable material ensures comfort throughout the day while maintaining 
-                            a sophisticated look.
+                        <p class="product-description" data-translate="productShortDescription">
+                            លើកកម្រិតវត្ថុបន្លាស់រដូវក្តៅរបស់អ្នកជាមួយនឹងសម្លៀកបំពាក់ដ៏ស្រស់ស្អាតនេះ។ ធ្វើពីវត្ថុធាតុដើមកំរិតខ្ពស់ដោយ 
+                            យកចិត្តទុកដាក់លើព័ត៌មានលម្អិត សម្លៀកបំពាក់នេះមានរូបរាងដ៏ស្រស់ស្អាតដែលសមស្របសម្រាប់ពេលវេលា 
+                            ណាមួយ។ វត្ថុធាតុដើមដែលអាចដកដង្ហើមបានធានានូវភាពងាយស្រួលអស់រយៈពេលពេញថ្ងៃខណៈពេលថែរក្សា 
+                            រូបរាងដ៏ស្រស់ស្អាត។
                         </p>
 
                         <!-- Size Selection -->
                         <div class="option-group">
-                            <label class="option-label">Size</label>
+                            <label class="option-label" data-translate="size">ទំហំ</label>
                             <div class="size-options">
                                 <button class="size-btn" onclick="selectSize(this)">XS</button>
                                 <button class="size-btn" onclick="selectSize(this)">S</button>
@@ -125,7 +125,7 @@
 
                         <!-- Color Selection -->
                         <div class="option-group">
-                            <label class="option-label">Color</label>
+                            <label class="option-label" data-translate="color">ពណ៌</label>
                             <div class="color-options">
                                 <button class="color-btn active" style="background: #000;" onclick="selectColor(this)"></button>
                                 <button class="color-btn" style="background: #fff; border: 2px solid #d1d5db;" onclick="selectColor(this)"></button>
@@ -136,7 +136,7 @@
 
                         <!-- Quantity Selection -->
                         <div class="option-group">
-                            <label class="option-label">Quantity</label>
+                            <label class="option-label" data-translate="quantity">ចំនួន</label>
                             <div class="quantity-selector">
                                 <button class="qty-btn" onclick="decreaseQty()">-</button>
                                 <input type="number" id="quantity" class="qty-input" value="1" min="1" max="10" readonly>
@@ -146,11 +146,11 @@
 
                         <!-- Action Buttons -->
                         <div class="action-buttons">
-                            <button class="add-to-cart-btn" onclick="addToCart()">
-                                🛒 Add to Cart
+                            <button class="add-to-cart-btn" onclick="addToCart()" data-translate="addToCart">
+                                🛒 ដាក់ចូលកន្ត្រក
                             </button>
-                            <button class="buy-now-btn" onclick="buyNow()">
-                                Buy Now
+                            <button class="buy-now-btn" onclick="buyNow()" data-translate="buyNow">
+                                ទិញឥឡូវនេះ
                             </button>
                             <button class="wishlist-btn">
                                 ❤️
@@ -161,19 +161,19 @@
                         <div class="product-features">
                             <div class="feature-item">
                                 <div class="feature-icon">✓</div>
-                                <div>Free shipping on orders over $50</div>
+                                <div data-translate="freeShippingOver50">ការដឹកជញ្ជូនឥតគិតថ្លៃសម្រាប់ការបញ្ជាទិញលើស $50</div>
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon">✓</div>
-                                <div>30-day return policy</div>
+                                <div data-translate="thirtyDayReturn">គោលការណ៍ត្រឡប់វិញ 30 ថ្ងៃ</div>
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon">✓</div>
-                                <div>Secure payment</div>
+                                <div data-translate="securePayment">ការទូទាត់ដ៏សុវត្ថិភាព</div>
                             </div>
                             <div class="feature-item">
                                 <div class="feature-icon">✓</div>
-                                <div>Authentic products guaranteed</div>
+                                <div data-translate="authenticProducts">ធានាផលិតផលដើម</div>
                             </div>
                         </div>
                     </div>
@@ -183,67 +183,67 @@
             <!-- Product Tabs -->
             <div class="product-tabs">
                 <div class="tab-buttons">
-                    <button class="tab-btn active" onclick="openTab('description')">Description</button>
-                    <button class="tab-btn" onclick="openTab('specifications')">Specifications</button>
-                    <button class="tab-btn" onclick="openTab('reviews')">Reviews (124)</button>
-                    <button class="tab-btn" onclick="openTab('shipping')">Shipping & Returns</button>
+                    <button class="tab-btn active" onclick="openTab('description')" data-translate="tabDescription">ការពិពណ៌នា</button>
+                    <button class="tab-btn" onclick="openTab('specifications')" data-translate="tabSpecifications">លក្ខណៈសម្បត្តិ</button>
+                    <button class="tab-btn" onclick="openTab('reviews')" data-translate="tabReviews">មតិយោបល់ (124)</button>
+                    <button class="tab-btn" onclick="openTab('shipping')" data-translate="tabShipping">ការដឹកជញ្ជូន និងការត្រឡប់វិញ</button>
                 </div>
 
                 <!-- Description Tab -->
                 <div id="description" class="tab-content active">
-                    <h3 style="margin-bottom: 20px;">Product Description</h3>
-                    <p style="line-height: 1.8; color: #4b5563;">
-                        This elegant summer dress is the perfect addition to your wardrobe. Made from premium quality 
-                        fabric that's both comfortable and durable, it features a timeless design that never goes out 
-                        of style. The dress is designed to flatter all body types with its carefully crafted silhouette.
+                    <h3 style="margin-bottom: 20px;" data-translate="productDescription">ការពិពណ៌នាផលិតផល</h3>
+                    <p style="line-height: 1.8; color: #4b5563;" data-translate="productDescriptionFull">
+                        សម្លៀកបំពាក់ក្នុងរដូវក្តៅដ៏ស្រស់ស្អាតនេះគឺជាការបន្ថែមដ៏ល្អប្រសើរសម្រាប់វត្ថុបន្លាស់របស់អ្នក។ ធ្វើពីវត្ថុធាតុដើម 
+                        គុណភាពខ្ពស់ដែលមានភាពងាយស្រួល និងអត់ធ្វើបានយូរ វាមានការរចនាដ៏ស្រស់ស្អាតដែលមិនធ្លាក់បង់ 
+                        ចេញពីបែបផែន។ សម្លៀកបំពាក់នេះត្រូវបានរចនាឡើងដើម្បីលើកស្ទួយរាងកាយទាំងអស់ដោយរូបរាងដែលត្រូវបានធ្វើឱ្យបានយ៉ាងល្អ។
                     </p>
                     <br>
                     <p style="line-height: 1.8; color: #4b5563;">
-                        Key features include:
+                        លក្ខណៈពិសេសចម្បងរួមមាន៖
                     </p>
                     <ul style="line-height: 2; color: #4b5563; margin-left: 20px;">
-                        <li>Premium quality fabric</li>
-                        <li>Breathable and comfortable</li>
-                        <li>Easy to care for - machine washable</li>
-                        <li>Available in multiple colors and sizes</li>
-                        <li>Perfect for casual and semi-formal occasions</li>
+                        <li data-translate="featurePremiumQuality">វត្ថុធាតុដើមគុណភាពខ្ពស់</li>
+                        <li data-translate="featureBreathable">អាចដកដង្ហើមបាន និងងាយស្រួល</li>
+                        <li data-translate="featureEasyCare">ងាយស្រួលថែរក្សា - អាចបោកដៃម៉ាស៊ីនបាន</li>
+                        <li data-translate="featureAvailableColors">មាននៅក្នុងពណ៌ និងទំហំច្រើន</li>
+                        <li data-translate="featureOccasions">សមស្របសម្រាប់ពេលប្រើប្រាស់ធម្មតា និងកិច្ចការកម្រិតពាក់កណ្តាល</li>
                     </ul>
                 </div>
 
                 <!-- Specifications Tab -->
                 <div id="specifications" class="tab-content">
-                    <h3 style="margin-bottom: 20px;">Product Specifications</h3>
+                    <h3 style="margin-bottom: 20px;" data-translate="productSpecifications">លក្ខណៈសម្បត្តិផលិតផល</h3>
                     <table class="specifications-table">
                         <tr>
-                            <td>Material</td>
-                            <td>95% Cotton, 5% Elastane</td>
+                            <td>វត្ថុធាតុដើម</td>
+                            <td>កប់ពូជ 95%, អេឡាស្តាន 5%</td>
                         </tr>
                         <tr>
-                            <td>Care Instructions</td>
-                            <td>Machine wash cold, tumble dry low</td>
+                            <td>ការណែនាំថែរក្សា</td>
+                            <td>បោកដៃម៉ាស៊ីនត្រជាក់, សម្រកខ្លាំងតិច</td>
                         </tr>
                         <tr>
-                            <td>Fit Type</td>
-                            <td>Regular Fit</td>
+                            <td>ប្រភេទសម្លៀកបំពាក់</td>
+                            <td>សម្លៀកបំពាក់ធម្មតា</td>
                         </tr>
                         <tr>
-                            <td>Pattern</td>
-                            <td>Solid</td>
+                            <td>លក្ខណៈបែបបទ</td>
+                            <td>ពណ៌រលោង</td>
                         </tr>
                         <tr>
-                            <td>Sleeve Length</td>
-                            <td>Short Sleeve</td>
+                            <td>ប្រវែងដៃ</td>
+                            <td>ដៃខ្លី</td>
                         </tr>
                         <tr>
-                            <td>Country of Origin</td>
-                            <td>Made in USA</td>
+                            <td>ប្រទេសដើម</td>
+                            <td>ផលិតនៅអាមេរិក</td>
                         </tr>
                     </table>
                 </div>
 
                 <!-- Reviews Tab -->
                 <div id="reviews" class="tab-content">
-                    <h3 style="margin-bottom: 30px;">Customer Reviews</h3>
+                    <h3 style="margin-bottom: 30px;" data-translate="customerReviews">មតិយោបល់អតិថិជន</h3>
                     
                     <div class="review-item">
                         <div class="review-header">
@@ -251,11 +251,11 @@
                                 <div class="reviewer-name">Sarah Johnson</div>
                                 <div class="stars" style="color: #fbbf24;">★★★★★</div>
                             </div>
-                            <div class="review-date">January 15, 2025</div>
+                            <div class="review-date">ខែមករា 15, 2025</div>
                         </div>
-                        <p style="color: #4b5563; line-height: 1.8;">
-                            Absolutely love this dress! The quality is amazing and it fits perfectly. 
-                            I've received so many compliments when wearing it. Highly recommend!
+                        <p style="color: #4b5563; line-height: 1.8;" data-translate="review1Content">
+                            ្រលាញ់សម្លៀកបំពាក់នេះណាស់! គុណភាពគឺអស្ច័យយ៉ាងខ្លាំង ហើយវាតែសមប្រកបបានល្អ។ 
+                            ខ្ញុំបានទទួលការសរសើរច្រើនណាស់ពេលពាក់វា។ អនុលោមឱ្យយ៉ាងខ្លាំង!
                         </p>
                     </div>
 
@@ -265,11 +265,11 @@
                                 <div class="reviewer-name">Emily Chen</div>
                                 <div class="stars" style="color: #fbbf24;">★★★★★</div>
                             </div>
-                            <div class="review-date">January 10, 2025</div>
+                            <div class="review-date">ខែមករា 10, 2025</div>
                         </div>
-                        <p style="color: #4b5563; line-height: 1.8;">
-                            Great dress for the price! The fabric is soft and comfortable. 
-                            Perfect for summer days. Will definitely buy more colors.
+                        <p style="color: #4b5563; line-height: 1.8;" data-translate="review2Content">
+                            សម្លៀកបំពាក់ល្អសម្រាប់តម្លៃ! វត្ថុធាតុដើមគឺទន់ និងងាយស្រួល។ 
+                            ល្អប្រសើរសម្រាប់ថ្ងៃក្នុងរដូវក្តៅ។ ពិតជាទិញពណ៌ផ្សេងទៀត។
                         </p>
                     </div>
 
@@ -279,35 +279,35 @@
                                 <div class="reviewer-name">Maria Rodriguez</div>
                                 <div class="stars" style="color: #fbbf24;">★★★★☆</div>
                             </div>
-                            <div class="review-date">January 5, 2025</div>
+                            <div class="review-date">ខែមករា 5, 2025</div>
                         </div>
-                        <p style="color: #4b5563; line-height: 1.8;">
-                            Beautiful dress! Only giving 4 stars because I wish it came in more colors. 
-                            Otherwise, it's perfect!
+                        <p style="color: #4b5563; line-height: 1.8;" data-translate="review3Content">
+                            សម្លៀកបំពាក់ដ៏ស្រស់ស្អាត! ផ្តល់តែ 4 ផ្កាយប៉ុណ្ណោះព្រោះខ្ញុំបានសង្ឃឹមថាវាមានពណ៌ច្រើនជាងនេះ។ 
+                            បើមិនដូច្នេះទេ វាល្អប្រសើរ!
                         </p>
                     </div>
                 </div>
 
                 <!-- Shipping Tab -->
                 <div id="shipping" class="tab-content">
-                    <h3 style="margin-bottom: 20px;">Shipping & Returns</h3>
+                    <h3 style="margin-bottom: 20px;" data-translate="shippingReturns">ការដឹកជញ្ជូន និងការត្រឡប់វិញ</h3>
                     <br>
-                    <h4 style="margin-bottom: 12px;">Shipping Information</h4>
+                    <h4 style="margin-bottom: 12px;" data-translate="shippingInfo">ព័ត៌មានការដឹកជញ្ជូន</h4>
                     <ul style="line-height: 2; color: #4b5563; margin-left: 20px; margin-bottom: 30px;">
-                        <li>Free standard shipping on orders over $50</li>
-                        <li>Express shipping available for $15</li>
-                        <li>Standard delivery: 5-7 business days</li>
-                        <li>Express delivery: 2-3 business days</li>
-                        <li>International shipping available</li>
+                        <li data-translate="shippingFreeStandard">ការដឹកជញ្ជូនស្តង់ដារឥតគិតថ្លៃសម្រាប់ការបញ្ជាទិញលើស $50</li>
+                        <li data-translate="shippingExpressFee">ការដឹកជញ្ជូនរហ័សរួមមានតម្លៃ $15</li>
+                        <li data-translate="shippingStandardDelivery">ការដឹកជញ្ជូនស្តង់ដារ: 5-7 ថ្ងៃធ្វើការ</li>
+                        <li data-translate="shippingExpressDelivery">ការដឹកជញ្ជូនរហ័ស: 2-3 ថ្ងៃធ្វើការ</li>
+                        <li data-translate="shippingInternational">ការដឹកជញ្ជូនអន្តរជាតិមាន</li>
                     </ul>
 
-                    <h4 style="margin-bottom: 12px;">Return Policy</h4>
+                    <h4 style="margin-bottom: 12px;" data-translate="returnPolicy">គោលការណ៍ត្រឡប់វិញ</h4>
                     <ul style="line-height: 2; color: #4b5563; margin-left: 20px;">
-                        <li>30-day return policy</li>
-                        <li>Items must be unused and in original packaging</li>
-                        <li>Free returns for defective items</li>
-                        <li>Refunds processed within 5-7 business days</li>
-                        <li>Exchange available for different size or color</li>
+                        <li data-translate="thirtyDayReturn">គោលការណ៍ត្រឡប់វិញ 30 ថ្ងៃ</li>
+                        <li data-translate="returnItemsCondition">វត្ថុត្រូវតែមិនទាន់ប្រើ និងនៅក្នុងកញ្ចប់ដើម</li>
+                        <li data-translate="returnFreeDefective">ការត្រឡប់វិញឥតគិតថ្លៃសម្រាប់វត្ថុដែលមានបញ្ហា</li>
+                        <li data-translate="returnRefundsProcessed">ការសងប្រាក់ត្រូវបានដំណើរការក្នុងរយៈពេល 5-7 ថ្ងៃធ្វើការ</li>
+                        <li data-translate="returnExchangeAvailable">ការផ្លាស់ប្តូរមានសម្រាប់ទំហំ ឬពណ៌ផ្សេង</li>
                     </ul>
                 </div>
             </div>
@@ -315,42 +315,34 @@
     </section>
 
     <!-- Related Products -->
-    <section class="related-products">
-        <div class="container">
-            <h2 class="section-title">You May Also Like</h2>
-            <div class="row g-4">
-                <div class="col-md-3">
-                    <div class="product-card" onclick="window.location.href='product-detail.html?id=w2'">
-                        <img src="assets/women picture/download (10).jpg" class="product-card-image" alt="Product">
-                        <div class="product-card-info">
-                            <div class="product-card-name">Floral Print Blouse</div>
-                            <div class="product-card-price">$54.99</div>
+    <section class="related-products" style="padding: 30px 0; overflow-x: hidden;">
+        <div class="container" style="max-width: 100%; padding: 0 20px; margin: 0 auto;">
+            <h2 class="section-title" style="font-size: 24px; margin-bottom: 20px;" data-translate="youMayAlsoLike">អ្នកប្រហែលជាចូលចិត្តផងដែរ</h2>
+            <div class="row g-2" style="display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 15px; padding-bottom: 10px;">
+                <div class="col-md-4" style="flex: 0 0 300px; min-width: 300px;">
+                    <div class="product-card" onclick="window.location.href='product-detail.html?id=w2'" style="height: auto; border: 1px solid #e5e7eb; border-radius: 8px; cursor: pointer;">
+                        <img src="assets/women picture/download (10).jpg" class="product-card-image" alt="Product" style="height: 250px; width: 100%; object-fit: cover;">
+                        <div class="product-card-info" style="padding: 8px;">
+                            <div class="product-card-name" style="font-size: 14px; margin: 3px 0;" data-translate="floralPrintBlouse">អាវបោះរូបផ្ការបែបផែន</div>
+                            <div class="product-card-price" style="font-size: 14px; margin: 0;">$54.99</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="product-card" onclick="window.location.href='product-detail.html?id=w3'">
-                        <img src="assets/women picture/download (11).jpg" class="product-card-image" alt="Product">
-                        <div class="product-card-info">
-                            <div class="product-card-name">High-Waist Jeans</div>
-                            <div class="product-card-price">$79.99</div>
+                <div class="col-md-4" style="flex: 0 0 300px; min-width: 300px;">
+                    <div class="product-card" onclick="window.location.href='product-detail.html?id=w3'" style="height: auto; border: 1px solid #e5e7eb; border-radius: 8px; cursor: pointer;">
+                        <img src="assets/women picture/download (11).jpg" class="product-card-image" alt="Product" style="height: 250px; width: 100%; object-fit: cover;">
+                        <div class="product-card-info" style="padding: 8px;">
+                            <div class="product-card-name" style="font-size: 14px; margin: 3px 0;" data-translate="highWaistJeans">ខោហ្ស៊ីនខ្ពស់ចង្អៀត</div>
+                            <div class="product-card-price" style="font-size: 14px; margin: 0;">$79.99</div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <div class="product-card" onclick="window.location.href='product-detail.html?id=w4'">
-                        <img src="assets/women picture/download (12).jpg" class="product-card-image" alt="Product">
-                        <div class="product-card-info">
-                            <div class="product-card-name">Casual T-Shirt</div>
-                            <div class="product-card-price">$29.99</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="product-card" onclick="window.location.href='product-detail.html?id=w5'">
-                        <div class="product-card-info">
-                            <div class="product-card-name">Evening Gown</div>
-                            <div class="product-card-price">$159.99</div>
+                <div class="col-md-4" style="flex: 0 0 300px; min-width: 300px;">
+                    <div class="product-card" onclick="window.location.href='product-detail.html?id=w4'" style="height: auto; border: 1px solid #e5e7eb; border-radius: 8px; cursor: pointer;">
+                        <img src="assets/women picture/download (12).jpg" class="product-card-image" alt="Product" style="height: 250px; width: 100%; object-fit: cover;">
+                        <div class="product-card-info" style="padding: 8px;">
+                            <div class="product-card-name" style="font-size: 14px; margin: 3px 0;" data-translate="casualTShirt">អាវខ្លីបែបធម្មតា</div>
+                            <div class="product-card-price" style="font-size: 14px; margin: 0;">$29.99</div>
                         </div>
                     </div>
                 </div>
@@ -363,34 +355,34 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>Shop</h3>
+                    <h3>ទិញ</h3>
                     <ul class="footer-links">
-                        <li><a href="women.html">Women</a></li>
-                        <li><a href="men.html">Men</a></li>
-                        <li><a href="kids.html">Kids</a></li>
-                        <li><a href="#">Sale</a></li>
+                        <li><a href="women.html">ស្រ្តី</a></li>
+                        <li><a href="men.html">បុរស</a></li>
+                        <li><a href="kids.html">កុមារ</a></li>
+                        <li><a href="#">លក់បញ្ចុះតម្លៃ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Help</h3>
+                    <h3>ជំនួយ</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Customer Service</a></li>
-                        <li><a href="#">Shipping Info</a></li>
-                        <li><a href="#">Returns</a></li>
-                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">សេវាកម្មអតិថិជន</a></li>
+                        <li><a href="#">ព័ត៌មានការដឹកជញ្ជូន</a></li>
+                        <li><a href="#">ការត្រឡប់វិញ</a></li>
+                        <li><a href="#">មគ្គុទ្ទេសក៍ទំហំ</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Company</h3>
+                    <h3>ក្រុមហ៊ុន</h3>
                     <ul class="footer-links">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">អំពីយើង</a></li>
+                        <li><a href="#">អាជីពការងារ</a></li>
+                        <li><a href="#">ទំនាក់ទំនង</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Modern Clothes. All rights reserved.</p>
+                <p>© 2025 Modern Clothes. រក្សាសិទ្ធិគ្រប់បែបយ៉ាង។</p>
             </div>
         </div>
     </footer>
@@ -534,12 +526,12 @@ const products = {
 
         // Add to cart
         function addToCart() {
-            alert('Product added to cart successfully!');
+            alert('បានដាក់ផលិតផលចូលកន្ត្រកដោយជោគជ័យ!');
         }
 
         // Buy now
         function buyNow() {
-            alert('Proceeding to checkout...');
+            alert('កំពុងបន្តទៅការទូទាត់...');
             // You can redirect to checkout page here
             // window.location.href = 'checkout.html';
         }
