@@ -87,3 +87,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+const translations = {
+    en: {
+        // ... existing keys ...
+        footerShop: 'Shop',
+        footerHelp: 'Help',
+        footerCompany: 'Company',
+        footerCustomerService: 'Customer Service',
+        footerShipping: 'Shipping Info',
+        footerReturns: 'Returns',
+        footerFAQ: 'FAQ',
+        tagSale: 'Sale',
+        footerCopyright: '© 2025 Modern Clothes. All rights reserved.'
+    },
+    kh: {
+        // ... existing keys ...
+        footerShop: 'ហាង',
+        footerHelp: 'ជំនួយ',
+        footerCompany: 'ក្រុមហ៊ុន',
+        footerCustomerService: 'សេវាកម្មអតិថិជន',
+        footerShipping: 'ព័ត៌មានដឹកជញ្ជូន',
+        footerReturns: 'ការប្តូរទំនិញវិញ',
+        footerFAQ: 'សំណួរដែលសួរញឹកញាប់',
+        tagSale: 'បញ្ចុះតម្លៃ',
+        footerCopyright: '© ២០២៥ Modern Clothes។ រក្សាសិទ្ធិគ្រប់យ៉ាង។'
+    }
+};
