@@ -136,3 +136,25 @@ body {
     .map-container { height: 300px; }
     .products-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
 }
+/* Language Flag Icons */
+.dropdown-item.kh::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    background-image: url('https://flagcdn.com/w40/kh.png');
+    background-size: cover;
+    vertical-align: middle;
+}
+
+.dropdown-item.us::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 15px;
+    margin-right: 10px;
+    background-image: url('https://flagcdn.com/w40/us.png');
+    background-size: cover;
+    vertical-align: middle;
+}
