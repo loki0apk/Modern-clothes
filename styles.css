@@ -916,3 +916,13 @@ body {
     width: 20px;
     height: 20px;
 }
+const translations = {
+    en: {
+        // ... existing keys ...
+        contactMapTitle: 'Our Location',
+    },
+    kh: {
+        // ... existing keys ...
+        contactMapTitle: 'ទីតាំងរបស់យើង',
+    }
+};
