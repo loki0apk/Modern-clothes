@@ -284,3 +284,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+const translations = {
+    en: {
+        // ... existing keys ...
+        contactMapTitle: 'Our Location',
+    },
+    kh: {
+        // ... existing keys ...
+        contactMapTitle: 'ទីតាំងរបស់យើង',
+    }
+};
