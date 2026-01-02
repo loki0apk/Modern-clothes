@@ -163,13 +163,13 @@ ul { list-style: none; }
 }
 .product-card:hover .product-image img { transform: scale(1.08); }
 
-/* --- TAG FIX STARTS HERE --- */
+/* Product Tag Fix */
 .product-tag {
     position: absolute;
     top: 12px;
     left: 12px;
-    padding: 6px 14px;      /* Wider padding */
-    min-width: 50px;        /* Forces width */
+    padding: 6px 14px;      /* 1. Wider padding makes it longer */
+    min-width: 50px;        /* 2. Forces a minimum width */
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
@@ -179,9 +179,9 @@ ul { list-style: none; }
     text-align: center;
     border-radius: 2px;
 }
+
 .product-tag.new { background: #000; }
 .product-tag.sale { background: #dc2626; }
-/* --- TAG FIX ENDS HERE --- */
 
 /* Product Info */
 .product-info { padding: 15px; text-align: left; }
