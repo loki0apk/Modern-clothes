@@ -10,16 +10,22 @@ const translations = {
         navContact: 'Contact',
         navLanguage: 'English',
         navLogin: 'Login',
-        // Hero Section
+        // Hero & Page Content
         heroTitle: 'Discover Your Style',
         heroSubtitle: 'Explore our latest collection of premium fashion for everyone',
         heroButton: 'Shop Now',
-        // ... (Keep all your existing product and about keys here)
-        // Contact Page
-        contactHeroTitle: 'Get in Touch',
-        contactMapTitle: 'Our Location',
-        contactFormTitle: 'Send Us a Message',
-        // ...
+        menHeroTitle: "Men's Collection",
+        menHeroSubtitle: "Discover stylish and comfortable clothing for men",
+        // Footer Sections
+        footerShop: 'Shop',
+        footerHelp: 'Help',
+        footerCompany: 'Company',
+        footerCategories: 'Category',
+        footerCustomerService: 'Customer Service',
+        footerShipping: 'Shipping Info',
+        footerReturns: 'Returns',
+        footerFAQ: 'FAQ',
+        tagSale: 'Sale',
         footerCopyright: '© 2025 Modern Clothes. All rights reserved.'
     },
     kh: {
@@ -32,16 +38,22 @@ const translations = {
         navContact: 'ទំនាក់ទំនង',
         navLanguage: 'ភាសាខ្មែរ',
         navLogin: 'ចូលប្រើ',
-        // Hero Section
+        // Hero & Page Content
         heroTitle: 'ស្វែងរកស្ទីលផ្ទាល់ខ្លួនរបស់អ្នក',
         heroSubtitle: 'ស្វែងរកការប្រមូលផ្តុំម៉ូដសម្លៀកបំពាក់ថ្មីៗបំផុតសម្រាប់មនុស្សគ្រប់គ្នា',
         heroButton: 'ទិញឥឡូវនេះ',
-        // ... (Keep all your existing product and about keys here)
-        // Contact Page
-        contactHeroTitle: 'ទំនាក់ទំនងមកយើង',
-        contactMapTitle: 'ទីតាំងរបស់យើង',
-        contactFormTitle: 'ផ្ញើសារមកកាន់យើង',
-        // ...
+        menHeroTitle: "ការប្រមូលសម្លៀកបំពាក់បុរស",
+        menHeroSubtitle: "ស្វែងរកសម្លៀកបំពាក់ទាន់សម័យ និងមានផាសុកភាពសម្រាប់បុរស",
+        // Footer Sections
+        footerShop: 'ហាង',
+        footerHelp: 'ជំនួយ',
+        footerCompany: 'ក្រុមហ៊ុន',
+        footerCategories: 'ប្រភេទផលិតផល',
+        footerCustomerService: 'សេវាកម្មអតិថិជន',
+        footerShipping: 'ព័ត៌មានដឹកជញ្ជូន',
+        footerReturns: 'ការប្តូរទំនិញវិញ',
+        footerFAQ: 'សំណួរដែលសួរញឹកញាប់',
+        tagSale: 'បញ្ចុះតម្លៃ',
         footerCopyright: '© ២០២៥ Modern Clothes។ រក្សាសិទ្ធិគ្រប់យ៉ាង។'
     }
 };
@@ -54,11 +66,9 @@ function updateLanguage(lang) {
     
     const t = translations[lang];
     
-    // Update all elements with data-translate attribute
     Object.keys(t).forEach(key => {
         const elements = document.querySelectorAll(`[data-translate="${key}"]`);
         elements.forEach(el => {
-            // Handle placeholders for inputs
             if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                 el.placeholder = t[key];
             } else {
@@ -87,29 +97,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-const translations = {
-    en: {
-        // ... existing keys ...
-        footerShop: 'Shop',
-        footerHelp: 'Help',
-        footerCompany: 'Company',
-        footerCustomerService: 'Customer Service',
-        footerShipping: 'Shipping Info',
-        footerReturns: 'Returns',
-        footerFAQ: 'FAQ',
-        tagSale: 'Sale',
-        footerCopyright: '© 2025 Modern Clothes. All rights reserved.'
-    },
-    kh: {
-        // ... existing keys ...
-        footerShop: 'ហាង',
-        footerHelp: 'ជំនួយ',
-        footerCompany: 'ក្រុមហ៊ុន',
-        footerCustomerService: 'សេវាកម្មអតិថិជន',
-        footerShipping: 'ព័ត៌មានដឹកជញ្ជូន',
-        footerReturns: 'ការប្តូរទំនិញវិញ',
-        footerFAQ: 'សំណួរដែលសួរញឹកញាប់',
-        tagSale: 'បញ្ចុះតម្លៃ',
-        footerCopyright: '© ២០២៥ Modern Clothes។ រក្សាសិទ្ធិគ្រប់យ៉ាង។'
-    }
-};
